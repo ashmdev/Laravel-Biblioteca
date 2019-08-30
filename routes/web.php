@@ -12,4 +12,14 @@
 */
 
 Route::get('/', 'InicioController@index')->name('inicio');
-Route::get('permiso/{nombre}', 'PermisoController@index')->name('permiso');
+
+Route::get('admin/permiso/', '/Admin/PermisoController@index')->name('permiso');
+Route::group([
+    'prefix'    => 'admin',
+    'namespace' => 'Admin',
+    'as'        => 'admin.'
+    ], function () {
+    Route::get('permiso', 'PermisoController@listar')->name('listar');
+    Route::get('permiso/crear', 'PermisoController@crear')->name('crear');
+    Route::get('permiso/guardar', 'PermisoController@guardar')->name('guardar');
+});

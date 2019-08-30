@@ -8,5 +8,4 @@
 <script src="{{asset("assets/$theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset("assets/$theme/dist/js/demo.js")}}"></script>
+@yield('script')
