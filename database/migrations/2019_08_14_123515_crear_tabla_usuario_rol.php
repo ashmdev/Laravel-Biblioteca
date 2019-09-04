@@ -14,7 +14,6 @@ class CrearTablaUsuarioRol extends Migration
     public function up()
     {
         Schema::create('usuario_rol', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->boolean('estado');
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id', 'fk_usuariorol_rol')
@@ -28,7 +27,8 @@ class CrearTablaUsuarioRol extends Migration
                 ->on('usuario')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->timestamps();
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_spanish_ci';
         });
     }
 
