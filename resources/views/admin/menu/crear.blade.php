@@ -7,6 +7,8 @@
 @section('contenido')
     <div class="row">
         <div class="col-xs-12">
+            @include('includes.forms.errores')
+            @include('includes.forms.mensajes')
             <div class="box box-info">
                 <div class="box-header">
                     <h3 class="box-title">Crear menu</h3>
