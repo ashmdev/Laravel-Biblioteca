@@ -33,5 +33,4 @@ class Menu extends Model
     protected $table = "menu";
     protected $fillable = ['nombre', 'url', 'icono'];
     protected $guarded = ['id'];
-    public $timestamps = "";
 }
