@@ -6,13 +6,13 @@
 
 @section('head')
     <link rel="stylesheet"
-          href="{{asset('assets/css/fontawesome-iconpicker-3.0.0/css/fontawesome-iconpicker.min.css')}}">
+          href="{{asset('assets/css/fontawesome-iconpicker/fontawesome-iconpicker.min.css')}}">
 @endsection
 
 @section('script')
-    <script src="{{asset('assets/js/fontawesome-iconpicker-3.0.0/js/fontawesome-iconpicker.min.js')}}"
+    <script src="{{asset('assets/js/fontawesome-iconpicker/fontawesome-iconpicker.min.js')}}"
             type="text/javascript"></script>
-    <script src="{{asset('assets/js/fontawesome-iconpicker-3.0.0/js/fa-icons.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/js/fontawesome-iconpicker/fa-icons.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/pages/admin/menu/crear.js')}}" type="text/javascript"></script>
 @endsection
 
