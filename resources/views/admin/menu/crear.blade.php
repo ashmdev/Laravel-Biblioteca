@@ -24,6 +24,13 @@
             <div class="box box-info">
                 <div class="box-header">
                     <h3 class="box-title">Crear menu</h3>
+                    <div class="box-tools pull-right">
+                        <a type="button" class="btn btn-sm bg-orange btn-flat margin"
+                           href="{{route('admin.listar_menu')}}">
+                            <i class="fa fa-backward"></i>
+                            Volver
+                        </a>
+                    </div>
                 </div>
                 <!-- /.box-header -->
                 <form id="form-general" method="POST" action="{{route('admin.guardar_menu')}}" class="form-horizontal"

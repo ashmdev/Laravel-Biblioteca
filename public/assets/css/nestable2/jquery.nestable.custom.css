@@ -50,7 +50,7 @@
 
     .dd {
         float: left;
-        width: 48%;
+        width: 70%;
     }
 
     .dd + .dd {
@@ -110,10 +110,10 @@
     white-space: nowrap;
     overflow: hidden;
     border: 1px solid #aaa;
-    background: #ddd;
-    background: -webkit-linear-gradient(top, #ddd 0%, #bbb 100%);
-    background: -moz-linear-gradient(top, #ddd 0%, #bbb 100%);
-    background: linear-gradient(top, #ddd 0%, #bbb 100%);
+    background: #53ddcd;
+    background: -webkit-linear-gradient(top, #53ddcd 0%, #44bb72 100%);
+    background: -moz-linear-gradient(top, #53ddcd 0%, #44bb72 100%);
+    background: linear-gradient(top, #53ddcd 0%, #44bb72 100%);
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }

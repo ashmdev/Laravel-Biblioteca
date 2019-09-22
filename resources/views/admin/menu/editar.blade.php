@@ -25,7 +25,13 @@
             <div class="box box-danger">
                 <div class="box-header with-border">
                     <h3 class="box-title">Editar Menú</h3>
-                    <a href="{{route('admin.listar_menu')}}" class="btn btn-info btn-sm pull-right">Listado</a>
+                    <div class="box-tools pull-right">
+                        <a type="button" class="btn btn-sm bg-orange btn-flat margin"
+                           href="{{route('admin.listar_menu')}}">
+                            <i class="fa fa-backward"></i>
+                            Volver
+                        </a>
+                    </div>
                 </div>
                 <form action="{{route('admin.actualizar_menu', ['id' => $data->id])}}" id="form-general"
                       class="form-horizontal" method="POST" autocomplete="off">

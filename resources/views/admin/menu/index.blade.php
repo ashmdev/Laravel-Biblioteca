@@ -20,6 +20,13 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Responsive Hover Table</h3>
+                    <div class="box-tools pull-right">
+                        <a type="button" class=" btn btn-sm bg-olive btn-flat margin"
+                           href="{{route('admin.crear_menu')}}">
+                            <i class="fa fa-plus-square"></i>
+                            Crear
+                        </a>
+                    </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

@@ -5,8 +5,8 @@
 
             <a href="{{route("admin.editar_menu", ['id' => $item["id"]])}}">
                 {{$item["nombre"] . " | Url -> " . $item["url"]}}
-                Icono -> <i style="font-size:20px;"
-                            class="fa fa-fw {{isset($item["icono"]) ? $item["icono"] : ""}}"></i>
+                Icono ->
+                <i style="font-size:20px;" class="fa {{isset($item["icono"]) ? $item["icono"] : ""}}"></i>
             </a>
             <a href="{{route('admin.eliminar_menu', ['id' => $item["id"]])}}" class="eliminar-menu pull-right tooltipsC"
                title="Eliminar este menú">
@@ -19,14 +19,11 @@
     <li class="dd-item dd3-item" data-id="{{$item['id']}}">
         <div class="dd-handle dd3-handle">Drag</div>
         <div class="dd3-content">
-
-
             <a href="{{route("admin.editar_menu", ['id' => $item["id"]])}}">
                 {{ $item["nombre"] . " | Url -> " . $item["url"]}}
                 Icono ->
-                <i style="font-size:20px;" class="fa fa-fw {{isset($item["icono"]) ? $item["icono"] : ""}}"></i>
+                <i class="fa {{isset($item["icono"]) ? $item["icono"] : ""}}"></i>
             </a>
-
             <a href="{{route('admin.eliminar_menu', ['id' => $item["id"]])}}" class="eliminar-menu pull-right tooltipsC"
                title="Eliminar este menú">
                 <i class="text-danger fa fa-trash-o"></i>

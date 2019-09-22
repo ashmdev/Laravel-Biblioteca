@@ -89,39 +89,24 @@ class Menu extends Model
         return $menuAll;
     }
 
+    public function guardarHijos($value)
+    {
+        if (!empty($value->children)) {
+            foreach ($value->children as $key => $vchild) {
+                $update_id = $vchild->id;
+                $parent_id = $value->id;
+                $this->where('id', $update_id)->update(['menu_id' => $parent_id, 'orden' => $key + 1]);
+                $this->guardarHijos($vchild);
+            }
+        }
+    }
+
     public function guardarOrden($menu)
     {
         $menus = json_decode($menu);
         foreach ($menus as $var => $value) {
             $this->where('id', $value->id)->update(['menu_id' => 0, 'orden' => $var + 1]);
-            if (!empty($value->children)) {
-                foreach ($value->children as $key => $vchild) {
-                    $update_id = $vchild->id;
-                    $parent_id = $value->id;
-                    $this->where('id', $update_id)->update(['menu_id' => $parent_id, 'orden' => $key + 1]);
-                    if (!empty($vchild->children)) {
-                        foreach ($vchild->children as $key => $vchild1) {
-                            $update_id = $vchild1->id;
-                            $parent_id = $vchild->id;
-                            $this->where('id', $update_id)->update(['menu_id' => $parent_id, 'orden' => $key + 1]);
-                            if (!empty($vchild1->children)) {
-                                foreach ($vchild1->children as $key => $vchild2) {
-                                    $update_id = $vchild2->id;
-                                    $parent_id = $vchild1->id;
-                                    $this->where('id', $update_id)->update(['menu_id' => $parent_id, 'orden' => $key + 1]);
-                                    if (!empty($vchild2->children)) {
-                                        foreach ($vchild2->children as $key => $vchild3) {
-                                            $update_id = $vchild3->id;
-                                            $parent_id = $vchild2->id;
-                                            $this->where('id', $update_id)->update(['menu_id' => $parent_id, 'orden' => $key + 1]);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            $this->guardarHijos($value);
         }
     }
 
