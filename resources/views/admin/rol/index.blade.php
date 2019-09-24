@@ -4,7 +4,6 @@
     Listar rol
 @endsection
 
-
 @section('script')
     <script src="{{asset('assets/js/pages/index.js')}}"></script>
 @endsection
@@ -40,16 +39,18 @@
                                 <td>{{$rol->id}}</td>
                                 <td>{{$rol->nombre}}</td>
                                 <td class="text-right">
-                                    <a class="btn btn-sm bg-aqua btn-flat tooltipsC" title="Editar este rol"
+                                    <a class="btn btn-sm bg-aqua btn-flat tooltipsC"
+                                       title="Editar este rol"
                                        href="{{route('admin.editar_rol',['id'=>$rol->id])}}">
                                         <i class="fa fa-pencil-square"></i>
                                     </a>
                                     &nbsp;
-                                    <a class="btn btn-sm bg-maroon btn-flat tooltipsC eliminar-general"
-                                       title="Eliminar este rol"
-                                       href="{{route('admin.eliminar_rol',['id'=>$rol->id])}}">
+                                    <button class="btn btn-sm bg-maroon btn-flat tooltipsC eliminar-general"
+                                            title="Eliminar este rol"
+                                            data-method="DELETE"
+                                            data-url="{{route('admin.eliminar_rol',['id'=>$rol->id])}}">
                                         <i class="fa fa-trash"></i>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                         @endforeach

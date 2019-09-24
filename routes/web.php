@@ -36,5 +36,5 @@ Route::group([
     Route::post('rol', 'RolController@guardar')->name('guardar_rol');
     Route::get('rol/{id}/editar', 'RolController@editar')->name('editar_rol');
     Route::put('rol/{id}', 'RolController@actualizar')->name('actualizar_rol');
-    Route::get('rol/{id}/eliminar', 'RolController@eliminar')->name('eliminar_rol');
+    Route::delete('rol/{id}/eliminar', 'RolController@eliminar')->name('eliminar_rol');
 });

@@ -16,7 +16,7 @@
             @include('includes.forms.mensajes')
             <div class="box box-info">
                 <div class="box-header">
-                    <h3 class="box-title">Crear menu</h3>
+                    <h3 class="box-title">Crear rol</h3>
                     <div class="box-tools pull-right">
                         <a type="button" class="btn btn-sm bg-orange btn-flat margin tooltipsC" title="Listar roles"
                            href="{{route('admin.listar_rol')}}">
