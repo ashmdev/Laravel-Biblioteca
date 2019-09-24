@@ -19,7 +19,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Responsive Hover Table</h3>
+                    <h3 class="box-title">Lista de menús</h3>
                     <div class="box-tools pull-right">
                         <a type="button" class=" btn btn-sm bg-olive btn-flat margin"
                            href="{{route('admin.crear_menu')}}">

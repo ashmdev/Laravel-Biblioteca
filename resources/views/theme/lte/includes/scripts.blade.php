@@ -14,4 +14,7 @@
 <script src="{{asset("assets/js/funciones.js")}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<!-- custom -->
+<script src="{{asset("assets/js/curstom.js")}}"></script>
 @yield('script')
+

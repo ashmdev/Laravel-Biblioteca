@@ -1,19 +1,12 @@
 @extends("theme.$theme.layout")
 
 @section('titulo')
-    Crear menu
+    Crear rol
 @endsection
 
-@section('head')
-    <link rel="stylesheet"
-          href="{{asset('assets/css/fontawesome-iconpicker/fontawesome-iconpicker.min.css')}}">
-@endsection
 
 @section('script')
-    <script src="{{asset('assets/js/fontawesome-iconpicker/fontawesome-iconpicker.min.js')}}"
-            type="text/javascript"></script>
-    <script src="{{asset('assets/js/fontawesome-iconpicker/fa-icons.js')}}" type="text/javascript"></script>
-    <script src="{{asset('assets/js/pages/admin/menu/crear.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/js/pages/crear.js')}}" type="text/javascript"></script>
 @endsection
 
 @section('contenido')
@@ -25,19 +18,19 @@
                 <div class="box-header">
                     <h3 class="box-title">Crear menu</h3>
                     <div class="box-tools pull-right">
-                        <a type="button" class="btn btn-sm bg-orange btn-flat margin tooltipsC"
-                           href="{{route('admin.listar_menu')}}" title="Listar los menús">
+                        <a type="button" class="btn btn-sm bg-orange btn-flat margin tooltipsC" title="Listar roles"
+                           href="{{route('admin.listar_rol')}}">
                             <i class="fa fa-backward"></i>
                             Listar
                         </a>
                     </div>
                 </div>
                 <!-- /.box-header -->
-                <form id="form-general" method="POST" action="{{route('admin.guardar_menu')}}" class="form-horizontal"
+                <form id="form-general" method="POST" action="{{route('admin.guardar_rol')}}" class="form-horizontal"
                       autocomplete="off">
                     @csrf
                     <div class="box-body">
-                        @include('admin.menu.form')
+                        @include('admin.rol.form')
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
