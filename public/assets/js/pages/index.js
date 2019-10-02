@@ -27,7 +27,7 @@ $(document).ready(function() {
             dataType: 'JSON',
             data: data,
             success: function (respuesta) {
-                if (respuesta.status == '200') {
+                if (respuesta.status === '200') {
                     etiqueta.parents('tr').remove();
                     Biblioteca.notificaciones('El registro fue eliminado correctamente', 'Biblioteca', 'success');
                 } else {

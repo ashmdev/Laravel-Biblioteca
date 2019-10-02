@@ -36,6 +36,10 @@ class Menu extends Model
     protected $fillable = ['nombre', 'url', 'icono'];
     protected $guarded = ['id'];
 
+    public function roles(){
+        return $this->belongsToMany(Rol::class,'menu_rol');
+    }
+
     //obtiene todos los menus correspondiente a la sesión
     public function obtenerMenus($front)
     {
@@ -78,7 +82,7 @@ class Menu extends Model
         //contendra el array final con el menu ordenado por padres e hijos
         $menuAll = [];
         foreach ($menus as $line) {
-            //Como la respuesta viene ordenada por menu id y por orden, los padres (menu_ 0) vendran primeros el la
+            //Como la respuesta viene ordenada por menu id y por orden, los padres (menu_id 0) vendran primeros en la
             // respuesta de consulta, por tanto al aparecer un id distinto de cero, rompemos el ciclo.
             if ($line['menu_id'] != 0) {
                 break;

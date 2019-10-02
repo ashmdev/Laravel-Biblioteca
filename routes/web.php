@@ -37,4 +37,7 @@ Route::group([
     Route::get('rol/{id}/editar', 'RolController@editar')->name('editar_rol');
     Route::put('rol/{id}', 'RolController@actualizar')->name('actualizar_rol');
     Route::delete('rol/{id}/eliminar', 'RolController@eliminar')->name('eliminar_rol');
+    //Rutas MenuRol
+    Route::get('menu-rol', 'MenuRolController@listar')->name('listar_menu-rol');
+    Route::post('menu-rol', 'MenuRolController@guardar')->name('guardar_menu-rol');
 });
